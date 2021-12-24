@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MidSection from "./MidSection";
 
 function App() {
+  const Navbar = () => {
+    return (
+      <nav className="brown">
+        <div className="nav-wrapper">
+          <div className="container">
+            <a href="#" className="brand-logo">
+              Reactchain
+            </a>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+              <li>
+                <a href="sass.html">Settings</a>
+              </li>
+              <li>
+                <a href="collapsible.html">Create Transaction</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <MidSection />
     </div>
   );
 }
